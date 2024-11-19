@@ -20,33 +20,283 @@
 
 
 /**
-* Custm style started
+* Header CSS
 */
-.box{
+header{
 
-    background-color: rgb(221, 182, 130);
+    background: linear-gradient(vars.$section-gradient1, vars.$section-gradient2);
+    padding: 20px 0;
+
+    .header-widgets{
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo{
+            max-width: 100px;
+            max-height: 75px;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .menu{
+
+            ul{
+                li{
+                    display: inline-block;
+                    margin: 0 8px;
+                    
+
+                    a{
+                        display: block;
+                        padding: 5px 15px;
+                        color: vars.$text-color;
+                        transition: .3s linear ease-in-out;
+                        &:hover{
+                            color: vars.$primary-color;
+                        }
+                    }
+                }
+            }
+
+        }
 
 
-    //large first
-    @include mixins.responsive(large) {
-        background-color: lightblue;
     }
-
-    //then medium
-    @include mixins.responsive(medium) {
-        background-color: lightgreen;
-    }
-
-
-    //then small
-    @include mixins.responsive(small) {
-        background-color: rgb(245, 165, 177);
-    }
-
-   
-
-    
-
-   
 
 }
+// end of header css
+
+// Start Hero Section
+.hero{
+    padding: 90px 0;
+    background: url('../images/hero/solid-hero-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .left-bottom-element{
+        
+        img{
+            width: 280px;
+            height: 55px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            @include mixins.responsive(medium){
+                width: 250px;
+                height: 50px;
+            }
+
+            @include mixins.responsive(small){
+                width: 230px;
+                height: 45px;
+            }
+        }
+    }
+
+    .right-center-element{
+        
+        img{
+            height: 300px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        };
+    }
+
+    .hero-widgets{
+
+        display: flex;
+        align-items: center;
+
+        //for mobile screen
+        @include mixins.responsive(small){
+
+            flex-direction: column-reverse;
+
+        }
+
+        .hero-content{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 60%;
+
+            //resposive for smalll device
+            @include mixins.responsive(small){
+                width: 100%;
+            }
+
+            h1{
+                span{
+                    color: vars.$primary-color;
+                }
+            }
+            h5{
+                font-size: 22px;
+                @include mixins.responsive(medium){
+                    font-size: 16px;
+                }
+            }
+            p{
+                margin-top: 20px;
+            }
+            .cta{
+                margin-top: 26px;
+            }
+        }
+        .hero-profile{
+            width: 40%;
+            
+            @include mixins.responsive(small){
+
+                width: 80%;
+                margin-bottom: 40px;
+
+            }
+
+            .person-image{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                position: relative;
+
+                img{
+                    width: 100%;
+                }
+                .action-links{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    position: absolute;
+                    left: 35px;
+                    a{
+                        display: inline-block;
+                    }
+                    @include mixins.responsive(medium){
+                        left: 20px;
+                    }
+
+                    @include mixins.responsive(small){
+                        left: 28px;
+                    }
+
+                    img{
+                        border: 1px solid #fff;
+                        background: #fff;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 4px;
+                        cursor: pointer;
+
+                        @include mixins.responsive(medium){
+
+                            width: 28px;
+                            height: 28px;
+
+                        }
+                    }
+                }
+            }
+            .profile-action{
+                text-align: center;
+
+                h3{
+                    font-family: vars.$font-family-stylist;
+                    letter-spacing: 2px;
+                    font-weight: normal;
+                    font-size: 24px;
+                }
+            }
+        }
+
+    }
+
+}
+// End of Hero Section
+
+// started About-me Sectino
+.about-me{
+
+    padding: 75px 0;
+
+    .about-me-widgets{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+
+        @include mixins.responsive(medium){
+
+            flex-direction: column-reverse;
+
+        }
+
+        .about-content{
+
+            width: 70%;
+
+            @include mixins.responsive(medium){
+                width: 100%;
+            }
+
+            p.section-top-sub{
+                color: vars.$text-color;
+            }
+            p.section-sub-title{
+                color: vars.$text-color;
+                font-weight: bold;
+
+            }
+            h2.section-title{
+                color: vars.$primary-color;
+            }
+            .my-bio{
+                margin-top: 30px;
+
+                @include mixins.responsive(medium){
+
+                    text-align: justifys;
+
+                }
+
+                p{
+                    font-size: 17spx;
+                    margin: 10px 0;
+                    span{
+                        color: vars.$primary-color;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .about-image{
+            
+            width: 25%;
+
+            @include mixins.responsive(medium){
+
+                width: 50%;
+
+            }
+
+            img{
+                width: 100%;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                transform: rotate(6deg);
+            }
+        }
+    }
+
+}
+

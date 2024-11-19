@@ -1,0 +1,23 @@
+@use '../base/variable' as vars;
+
+@use '../base/mixins';
+
+.primary-btn{
+    display: inline-block;
+    background-color: vars.$primary-color;
+    padding: 14px 20px;
+    color: vars.$color-white;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: 0.7s linear ease-in-out;
+
+    @include mixins.responsive(medium){
+
+        font-size: 18px;
+
+    }
+
+    &:hover{
+        background-color: vars.$secondary-color;
+    }
+}
