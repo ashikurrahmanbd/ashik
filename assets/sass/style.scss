@@ -1,0 +1,52 @@
+// use all partials
+
+//base
+@use 'base/reset';
+@use 'base/variable' as vars;
+@use 'base/typography';
+@use 'base/functions';
+@use 'base/mixins';
+
+
+//components
+@use 'components/button';
+@use 'components/card';
+
+
+//Layout
+@use 'layout/grid';
+@use 'layout/header';
+@use 'layout/footer';
+
+
+/**
+* Custm style started
+*/
+.box{
+
+    background-color: rgb(221, 182, 130);
+
+
+    //large first
+    @include mixins.responsive(large) {
+        background-color: lightblue;
+    }
+
+    //then medium
+    @include mixins.responsive(medium) {
+        background-color: lightgreen;
+    }
+
+
+    //then small
+    @include mixins.responsive(small) {
+        background-color: rgb(245, 165, 177);
+    }
+
+   
+
+    
+
+   
+
+}

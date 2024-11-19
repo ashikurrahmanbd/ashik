@@ -1,0 +1,18 @@
+
+
+@use '_variable.scss' as vars;
+
+body{
+
+    font-family: vars.$font-family-base;
+    font-size: vars.$font-size-xl
+    
+
+    h1{
+        font-size: vars.$font-size-xl;
+    }
+    h2{
+        font-size: vars.$font-size-xl;
+    }
+
+}
