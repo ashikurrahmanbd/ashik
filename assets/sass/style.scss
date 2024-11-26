@@ -24,8 +24,11 @@
 */
 header{
 
-    background: linear-gradient(vars.$section-gradient1, vars.$section-gradient2);
+    background: linear-gradient(vars.$section-gradient2, vars.$section-gradient2);
+   
     padding: 20px 0;
+    box-shadow: 1px 1px 3px vars.$section-gradient2;
+    
 
     .header-widgets{
 
@@ -213,7 +216,7 @@ header{
                     font-family: vars.$font-family-stylist;
                     letter-spacing: 2px;
                     font-weight: normal;
-                    font-size: 24px;
+                    font-size: 28px;
                 }
             }
         }
@@ -296,6 +299,104 @@ header{
                 transform: rotate(6deg);
             }
         }
+    }
+
+}
+// end of About section
+
+// Start Technology I use Section
+.technology-i-used{
+
+    background-color: vars.$section-gradient2;
+    padding: 35px 0;
+
+    .technology-i-used-widgets{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mixins.responsive(small){
+
+            flex-direction: column;
+
+        }
+        
+        h3{
+            font-size: vars.$h3-font-size-lg;
+            color: vars.$primary-color;
+
+            @include mixins.responsive(small){
+                margin-bottom: 32px;
+            }
+        }
+
+        
+
+
+    }
+
+    .tech-logos{
+
+        display: inline-block;
+        
+        img{
+            width: 70px;
+            height: 70px;
+            margin: 0 8px;
+
+            @include mixins.responsive(medium){
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+
+}
+// end of Technology i used
+
+//start Product /project i developed
+.product-i-developed{
+
+    padding: 75px 0;
+
+    .product-i-developed-widgets{
+
+        h2{
+            text-align: center;
+            color: vars.$text-color
+        }
+
+        .products-catalog{
+
+            text-align: center;
+
+            ul.catalog-category{
+
+                margin-top: 25px;
+                li{
+                    display: inline-block;
+                    margin: 0 5px;
+
+                    a{
+                        display: block;
+                        padding: 8px 15px;
+                        border: 1px solid vars.$text-color;
+                        border-radius: 24px;
+                        color: vars.$text-color;
+                        
+                        &:hover{
+                            background-color: vars.$primary-color;
+                            color: #fff;
+                            border: 1px solid vars.$primary-color;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
     }
 
 }
