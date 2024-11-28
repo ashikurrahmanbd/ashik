@@ -378,11 +378,35 @@ header .header-widgets .menu ul li a:hover {
   border: 1px solid #333;
   border-radius: 24px;
   color: #333;
+  font-size: 15px;
 }
 .product-i-developed .product-i-developed-widgets .products-catalog ul.catalog-category li a:hover {
   background-color: #03087B;
   color: #fff;
   border: 1px solid #03087B;
+}
+.product-i-developed .product-i-developed-widgets .products-catalog .catalog-result {
+  margin-top: 75px;
+}
+.product-i-developed .product-i-developed-widgets .products-catalog .catalog-result > div {
+  display: none;
+}
+.product-i-developed .product-i-developed-widgets .products-catalog .catalog-result > div.active {
+  display: block;
+}
+.product-i-developed .product-i-developed-widgets .products-catalog .catalog-category li {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.product-i-developed .product-i-developed-widgets .products-catalog .catalog-category li a {
+  text-decoration: none;
+  color: #333;
+}
+.product-i-developed .product-i-developed-widgets .products-catalog .catalog-category li.active a {
+  font-weight: bold;
+  background-color: #03087B;
+  color: #fff;
 }
 
 /*# sourceMappingURL=gen-css.css.map */

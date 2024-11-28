@@ -384,6 +384,7 @@ header{
                         border: 1px solid vars.$text-color;
                         border-radius: 24px;
                         color: vars.$text-color;
+                        font-size: vars.$font-size-md;
                         
                         &:hover{
                             background-color: vars.$primary-color;
@@ -394,6 +395,46 @@ header{
                 }
 
             }
+
+            //css for the tabs
+
+
+            .catalog-result {
+                margin-top: 75px;
+                > div {
+                    display: none; // Hide all content divs by default
+            
+                    &.active {
+                        display: block; // Show the active content div
+                    }
+                }
+            }
+            
+            .catalog-category {
+                li {
+                    display: inline-block;
+                    margin: 0 10px;
+                    cursor: pointer;
+            
+                    a {
+                        text-decoration: none;
+                        color: #333;
+                    }
+            
+                    &.active {
+                        a {
+                            font-weight: bold;
+                            background-color: vars.$primary-color;
+                            color: vars.$color-white;
+                        }
+                    }
+                }
+            }
+
+            // css for the tabs end
+
+            
+            
 
         }
 
