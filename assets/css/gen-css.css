@@ -34,28 +34,28 @@ body .site-container {
 
 body {
   font-family: "Lato", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (max-width: 768px) {
   body {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 body h1 {
-  font-size: 70px;
+  font-size: 50px;
 }
 @media (max-width: 768px) {
   body h1 {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 @media (max-width: 576px) {
   body h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 body h2 {
-  font-size: 52px;
+  font-size: 46px;
 }
 @media (max-width: 768px) {
   body h2 {
@@ -64,33 +64,49 @@ body h2 {
 }
 @media (max-width: 576px) {
   body h2 {
-    font-size: 38px;
+    font-size: 36px;
   }
 }
 
 .primary-btn {
   display: inline-block;
   background-color: #03087B;
-  padding: 14px 20px;
+  padding: 14px 30px;
   color: #fff;
-  font-size: 20px;
-  border-radius: 8px;
+  font-size: 16px;
+  border-radius: 50px;
   transition: 0.7s linear ease-in-out;
 }
 @media (max-width: 768px) {
   .primary-btn {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .primary-btn:hover {
   background-color: #131AC4;
 }
 
+.secondary-btn {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid #333;
+  border-radius: 24px;
+  color: #333;
+  font-size: 14px;
+}
+.secondary-btn:hover {
+  background-color: #03087B;
+  color: #fff;
+}
+
 /**
 * Header CSS
 */
 header {
-  background: linear-gradient(#D1D3F3, #D1D3F3);
+  background: hsl(238, 59%, 89%);
+  background: linear-gradient(180deg, hsl(238, 59%, 89%) 0%, hsl(240, 71%, 97%) 100%);
+  background: -moz-linear-gradient(180deg, hsl(238, 59%, 89%) 0%, hsl(240, 71%, 97%) 100%);
+  background: -webkit-linear-gradient(180deg, hsl(238, 59%, 89%) 0%, hsl(240, 71%, 97%) 100%);
   padding: 20px 0;
   box-shadow: 1px 1px 3px #D1D3F3;
 }
@@ -122,7 +138,7 @@ header .header-widgets .menu ul li a:hover {
 }
 
 .hero {
-  padding: 90px 0;
+  padding: 35px 0;
   background: url("../images/hero/solid-hero-bg.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -168,8 +184,8 @@ header .header-widgets .menu ul li a:hover {
 .hero .hero-widgets .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 60%;
+  gap: 8px;
+  width: 70%;
 }
 @media (max-width: 576px) {
   .hero .hero-widgets .hero-content {
@@ -194,7 +210,7 @@ header .header-widgets .menu ul li a:hover {
   margin-top: 26px;
 }
 .hero .hero-widgets .hero-profile {
-  width: 40%;
+  width: 30%;
 }
 @media (max-width: 576px) {
   .hero .hero-widgets .hero-profile {
@@ -216,7 +232,7 @@ header .header-widgets .menu ul li a:hover {
   flex-direction: column;
   gap: 10px;
   position: absolute;
-  left: 35px;
+  left: 22px;
 }
 .hero .hero-widgets .hero-profile .person-image .action-links a {
   display: inline-block;
@@ -253,6 +269,9 @@ header .header-widgets .menu ul li a:hover {
   letter-spacing: 2px;
   font-weight: normal;
   font-size: 28px;
+}
+.hero .hero-widgets .hero-profile .profile-action p {
+  font-size: 14px;
 }
 
 .about-me {
@@ -297,7 +316,6 @@ header .header-widgets .menu ul li a:hover {
   }
 }
 .about-me .about-me-widgets .about-content .my-bio p {
-  font-size: 17spx;
   margin: 10px 0;
 }
 .about-me .about-me-widgets .about-content .my-bio p span {
@@ -333,7 +351,7 @@ header .header-widgets .menu ul li a:hover {
   }
 }
 .technology-i-used .technology-i-used-widgets h3 {
-  font-size: 38px;
+  font-size: 36px;
   color: #03087B;
 }
 @media (max-width: 576px) {
@@ -362,10 +380,8 @@ header .header-widgets .menu ul li a:hover {
   text-align: center;
   color: #333;
 }
-.product-i-developed .product-i-developed-widgets .products-catalog {
-  text-align: center;
-}
 .product-i-developed .product-i-developed-widgets .products-catalog ul.catalog-category {
+  text-align: center;
   margin-top: 25px;
 }
 .product-i-developed .product-i-developed-widgets .products-catalog ul.catalog-category li {
@@ -378,7 +394,7 @@ header .header-widgets .menu ul li a:hover {
   border: 1px solid #333;
   border-radius: 24px;
   color: #333;
-  font-size: 15px;
+  font-size: 14px;
 }
 .product-i-developed .product-i-developed-widgets .products-catalog ul.catalog-category li a:hover {
   background-color: #03087B;
@@ -386,7 +402,7 @@ header .header-widgets .menu ul li a:hover {
   border: 1px solid #03087B;
 }
 .product-i-developed .product-i-developed-widgets .products-catalog .catalog-result {
-  margin-top: 75px;
+  margin-top: 50px;
 }
 .product-i-developed .product-i-developed-widgets .products-catalog .catalog-result > div {
   display: none;
@@ -407,6 +423,40 @@ header .header-widgets .menu ul li a:hover {
   font-weight: bold;
   background-color: #03087B;
   color: #fff;
+}
+
+/*
+* Project Catalog Start
+*/
+.catalog-result .projects-row {
+  margin-top: 20px;
+  display: flex;
+  gap: 25px;
+}
+.catalog-result .projects-row .single-project {
+  width: 50%;
+  background-color: #D1D3F3;
+}
+.catalog-result .projects-row .single-project .project-thumb img {
+  width: 100%;
+  height: 320px;
+}
+.catalog-result .projects-row .single-project .project-info {
+  padding: 15px;
+}
+.catalog-result .projects-row .single-project .project-info h3 {
+  margin-bottom: 8px;
+}
+.catalog-result .projects-row .single-project .project-info .project-meta-n-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.catalog-result .projects-row .single-project .project-info .project-meta-n-action .project-meta {
+  margin-top: 18px;
+}
+.catalog-result .projects-row .single-project .project-info .project-meta-n-action .project-action a.btn {
+  margin-top: 22px;
 }
 
 /*# sourceMappingURL=gen-css.css.map */
