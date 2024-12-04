@@ -145,12 +145,14 @@ header .header-widgets .menu ul li a:hover {
   background-size: cover;
   position: relative;
 }
-.hero .left-bottom-element img {
-  width: 280px;
-  height: 55px;
+.hero .left-bottom-element {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+.hero .left-bottom-element img {
+  width: 280px;
+  height: 55px;
 }
 @media (max-width: 768px) {
   .hero .left-bottom-element img {
@@ -160,8 +162,7 @@ header .header-widgets .menu ul li a:hover {
 }
 @media (max-width: 576px) {
   .hero .left-bottom-element img {
-    width: 230px;
-    height: 45px;
+    display: none;
   }
 }
 .hero .right-center-element img {
@@ -187,6 +188,11 @@ header .header-widgets .menu ul li a:hover {
   gap: 8px;
   width: 70%;
 }
+@media (max-width: 768px) {
+  .hero .hero-widgets .hero-content {
+    width: 60%;
+  }
+}
 @media (max-width: 576px) {
   .hero .hero-widgets .hero-content {
     width: 100%;
@@ -211,6 +217,11 @@ header .header-widgets .menu ul li a:hover {
 }
 .hero .hero-widgets .hero-profile {
   width: 30%;
+}
+@media (max-width: 768px) {
+  .hero .hero-widgets .hero-profile {
+    width: 40%;
+  }
 }
 @media (max-width: 576px) {
   .hero .hero-widgets .hero-profile {
@@ -312,7 +323,7 @@ header .header-widgets .menu ul li a:hover {
 }
 @media (max-width: 768px) {
   .about-me .about-me-widgets .about-content .my-bio {
-    text-align: justifys;
+    text-align: justify;
   }
 }
 .about-me .about-me-widgets .about-content .my-bio p {
@@ -345,7 +356,7 @@ header .header-widgets .menu ul li a:hover {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .technology-i-used .technology-i-used-widgets {
     flex-direction: column;
   }
@@ -354,7 +365,7 @@ header .header-widgets .menu ul li a:hover {
   font-size: 36px;
   color: #03087B;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .technology-i-used .technology-i-used-widgets h3 {
     margin-bottom: 32px;
   }
@@ -386,7 +397,7 @@ header .header-widgets .menu ul li a:hover {
 }
 .product-i-developed .product-i-developed-widgets .products-catalog ul.catalog-category li {
   display: inline-block;
-  margin: 0 5px;
+  margin: 4px 5px;
 }
 .product-i-developed .product-i-developed-widgets .products-catalog ul.catalog-category li a {
   display: block;
@@ -433,9 +444,19 @@ header .header-widgets .menu ul li a:hover {
   display: flex;
   gap: 25px;
 }
+@media (max-width: 576px) {
+  .catalog-result .projects-row {
+    flex-direction: column;
+  }
+}
 .catalog-result .projects-row .single-project {
   width: 50%;
   background-color: #D1D3F3;
+}
+@media (max-width: 576px) {
+  .catalog-result .projects-row .single-project {
+    width: 100%;
+  }
 }
 .catalog-result .projects-row .single-project .project-thumb {
   width: 100%;
