@@ -437,9 +437,14 @@ header .header-widgets .menu ul li a:hover {
   width: 50%;
   background-color: #D1D3F3;
 }
-.catalog-result .projects-row .single-project .project-thumb img {
+.catalog-result .projects-row .single-project .project-thumb {
   width: 100%;
   height: 320px;
+}
+.catalog-result .projects-row .single-project .project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .catalog-result .projects-row .single-project .project-info {
   padding: 15px;
